@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "jsx": "react",
+    "lib": ["dom", "es2015", "esnext"],
+    "noEmit": true,
+    "baseUrl": "./src",
+    "sourceMap": true, // Skip source maps, set to true if needed in local development
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "importHelpers": true,
+    "resolveJsonModule": true,
+
+    // strictness
+    "strict": false,
+    "strictNullChecks": false,
+    "noImplicitAny": false
+  },
+  "include": ["./src/**/*"]
+}

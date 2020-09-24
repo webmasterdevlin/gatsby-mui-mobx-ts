@@ -1,0 +1,15 @@
+:root {
+  --pageMaxWidth: 1440px;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+}
+
+svg {
+  border-radius: 1.5rem;
+}
