@@ -1,6 +1,6 @@
 import React, { createContext } from "react";
 import { useLocalStore } from "mobx-react-lite";
-import { getPostsAxios } from "./json-placeholder.service";
+import { getPostByIdAxios, getPostsAxios } from "./json-placeholder.service";
 import { JsonPlaceholderType } from "./json-placeholder.type";
 
 export type JsonPlaceholderStoreSchema = {
@@ -10,6 +10,7 @@ export type JsonPlaceholderStoreSchema = {
   readonly error: string;
 
   readonly getPostsAction: () => Promise<void>;
+  readonly getPostByIdAction: (id: number) => Promise<void>;
   readonly removePostsAction: () => void;
   readonly totalPosts: any;
 };
@@ -34,6 +35,19 @@ export const JsonPlaceholderProvider = ({ children }) => {
       try {
         const { data } = await getPostsAxios();
         store.posts = data;
+      } catch (e) {
+        store.setError(e);
+      } finally {
+        store.loading = false;
+      }
+    },
+
+    async getPostByIdAction(id: number) {
+      store.loading = true;
+      store.error = "";
+      try {
+        const { data } = await getPostByIdAxios(id);
+        store.post = data;
       } catch (e) {
         store.setError(e);
       } finally {

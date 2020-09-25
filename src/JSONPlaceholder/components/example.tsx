@@ -4,6 +4,7 @@ import {
   jsonPlaceholderContext,
   JsonPlaceholderStoreSchema,
 } from "../json-placeholder.context";
+import { Button } from '@material-ui/core';
 
 const Example = () => {
   /*
@@ -30,6 +31,9 @@ const Example = () => {
             {po.title} - By: author with an ID of {po.userId}
           </h2>
           <p>{po.body}</p>
+          <Button onClick={()=> jsonPlaceholderStore.getPostByIdAction(po.id).then()} 
+          variant={'outlined'} color={'secondary'}
+          >SEE DETAILS</Button>
         </div>
       ))}
     </>

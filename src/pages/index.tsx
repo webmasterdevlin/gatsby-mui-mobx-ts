@@ -17,7 +17,7 @@ export default function Home() {
       <h1>
         Hello world! Is loading? {jsonPlaceholderStore.loading.toString()}
       </h1>
-
+      <h2>You have chosen: {jsonPlaceholderStore.post.title}</h2>
       <Button
         onClick={() => jsonPlaceholderStore.getPostsAction()}
         variant={"contained"}
