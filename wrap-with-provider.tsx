@@ -1,39 +1,26 @@
-import React from 'react';
+import React from "react";
 
 /*Material UI custom theming*/
-import { ThemeProvider } from '@material-ui/styles';
-import { createMuiTheme } from '@material-ui/core';
-// import { SampleCityProvider } from './src/stores/city-context';
-// import { SampleMapProvider } from './src/stores/map-context';
+import { ThemeProvider } from "@material-ui/styles";
+import { createMuiTheme } from "@material-ui/core";
+import { JsonPlaceholderProvider } from "./src/JSONPlaceholder/json-placeholder.context";
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#99c93c',
+      main: "#FF003F",
     },
     secondary: {
-      main: '#698d29',
+      main: "#890022",
     },
   },
   typography: {
-    fontFamily: [
-      'Roboto',
-      'Helvetica',
-      'Arial',
-      'sans-serif',
-    ].join(','),
+    fontFamily: ["Roboto", "Helvetica", "Arial", "sans-serif"].join(","),
   },
 });
 
-export type AppTheme = typeof theme;
-
 export default ({ element }) => (
-  // <SampleCityProvider>
-  //   <SampleMapProvider>
-      <ThemeProvider theme={theme}>{element}</ThemeProvider>
-  //   </SampleMapProvider>
-  // </SampleCityProvider>
+  <JsonPlaceholderProvider>
+    <ThemeProvider theme={theme}>{element}</ThemeProvider>
+  </JsonPlaceholderProvider>
 );
-
-
-// sample abstraction: <AllMobxProviders> <ThemeProvider theme={theme}>{element}</ThemeProvider></AllMobxProviders>

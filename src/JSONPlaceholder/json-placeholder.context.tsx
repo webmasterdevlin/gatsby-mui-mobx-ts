@@ -3,14 +3,15 @@ import { useLocalStore } from "mobx-react-lite";
 import { getPostsAxios } from "./json-placeholder.service";
 import { JsonPlaceholderType } from "./json-placeholder.type";
 
-export type JsonPlaceholderStore = {
-  posts: JsonPlaceholderType[];
-  post: JsonPlaceholderType;
-  loading: boolean;
-  error: string;
+export type JsonPlaceholderStoreSchema = {
+  readonly posts: JsonPlaceholderType[];
+  readonly post: JsonPlaceholderType;
+  readonly loading: boolean;
+  readonly error: string;
 
-  getPostsAction: () => Promise<void>;
-  totalPosts: any;
+  readonly getPostsAction: () => Promise<void>;
+  readonly removePostsAction: () => void;
+  readonly totalPosts: any;
 };
 
 export const JsonPlaceholderProvider = ({ children }) => {
@@ -26,7 +27,7 @@ export const JsonPlaceholderProvider = ({ children }) => {
     loading: false,
     error: "",
 
-    /*actions*/
+    /*asynchronous actions*/
     async getPostsAction() {
       store.loading = true;
       store.error = "";
@@ -34,10 +35,22 @@ export const JsonPlaceholderProvider = ({ children }) => {
         const { data } = await getPostsAxios();
         store.posts = data;
       } catch (e) {
-        store.error = e.message;
+        store.setError(e);
       } finally {
         store.loading = false;
       }
+    },
+
+    /*plain actions*/
+
+    removePostsAction() {
+      store.posts = [];
+      store.loading = false;
+    },
+
+    setError({ message }) {
+      store.error = message;
+      alert(message);
     },
 
     /*computed values also known as derived state*/
@@ -53,5 +66,6 @@ export const JsonPlaceholderProvider = ({ children }) => {
     </jsonPlaceholderContext.Provider>
   );
 };
-
-export const jsonPlaceholderContext = createContext<JsonPlaceholderStore>(null);
+export const jsonPlaceholderContext = createContext<JsonPlaceholderStoreSchema>(
+  null
+);
