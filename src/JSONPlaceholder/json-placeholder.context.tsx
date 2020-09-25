@@ -60,6 +60,7 @@ export const JsonPlaceholderProvider = ({ children }) => {
       store.loading = false;
     },
 
+    // temporary because this function does not send request to the backend
     temporaryRemovePostByIdAction(id: number) {
       store.posts = store.posts.filter(p => p.id !== id);
     },

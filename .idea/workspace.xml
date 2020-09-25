@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfaeedd3-8f9d-4240-b608-14ae3396fdb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JSONPlaceholder/components/example.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/JSONPlaceholder/components/example.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JSONPlaceholder/json-placeholder.context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/JSONPlaceholder/json-placeholder.context.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +91,7 @@
       <workItem from="1600979499183" duration="1650000" />
       <workItem from="1600981181817" duration="3933000" />
       <workItem from="1601011291237" duration="5021000" />
-      <workItem from="1601038506122" duration="2389000" />
+      <workItem from="1601038506122" duration="2492000" />
     </task>
     <task id="LOCAL-00001" summary="added mobx typings">
       <created>1600983881644</created>
@@ -118,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601016064467</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added temporary remove">
+      <created>1601041181018</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601041181018</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -133,16 +136,18 @@
     <MESSAGE value="added mobx typings" />
     <MESSAGE value="added axios mobx in gatsby implementation" />
     <MESSAGE value="added IDEs setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="added IDEs setup" />
+    <MESSAGE value="added temporary remove" />
+    <option name="LAST_COMMIT_MESSAGE" value="added temporary remove" />
   </component>
   <component name="WindowStateProjectService">
     <state x="653" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1601040777156">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state x="653" y="236" key="#com.intellij.ide.util.MemberChooser/0.23.1680.980@0.23.1680.980" timestamp="1601040777156" />
-    <state x="4646" y="104" key="CommitChangelistDialog2" timestamp="1601016064000">
-      <screen x="3840" y="0" width="2560" height="1400" />
+    <state x="529" y="23" width="863" height="980" key="CommitChangelistDialog2" timestamp="1601041180855">
+      <screen x="0" y="23" width="1680" height="980" />
     </state>
+    <state x="529" y="23" width="863" height="980" key="CommitChangelistDialog2/0.23.1680.980@0.23.1680.980" timestamp="1601041180855" />
     <state x="4646" y="104" key="CommitChangelistDialog2/3840.0.2560.1400/0.0.2560.1400@3840.0.2560.1400" timestamp="1601016064000" />
     <state x="4089" y="123" key="DiffContextDialog" timestamp="1601012496711">
       <screen x="3840" y="0" width="2560" height="1400" />
@@ -169,9 +174,10 @@
     </state>
     <state x="446" y="204" key="SettingsEditor/0.23.1680.980@0.23.1680.980" timestamp="1601039581209" />
     <state x="4520" y="259" key="SettingsEditor/3840.0.2560.1400/0.0.2560.1400@3840.0.2560.1400" timestamp="1601016022851" />
-    <state x="4613" y="364" key="Vcs.Push.Dialog.v2" timestamp="1601016065813">
-      <screen x="3840" y="0" width="2560" height="1400" />
+    <state x="507" y="278" key="Vcs.Push.Dialog.v2" timestamp="1601041182707">
+      <screen x="0" y="23" width="1680" height="980" />
     </state>
+    <state x="507" y="278" key="Vcs.Push.Dialog.v2/0.23.1680.980@0.23.1680.980" timestamp="1601041182707" />
     <state x="4613" y="364" key="Vcs.Push.Dialog.v2/3840.0.2560.1400/0.0.2560.1400@3840.0.2560.1400" timestamp="1601016065813" />
     <state x="4760" y="356" width="718" height="690" key="find.popup" timestamp="1601014603268">
       <screen x="3840" y="0" width="2560" height="1400" />
