@@ -70,8 +70,3 @@ yarn-error.log
 
 #package lock
 package-lock.json
-
-# IDEs
-.idea
-.vscode
-.code
