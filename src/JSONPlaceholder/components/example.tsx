@@ -4,7 +4,7 @@ import {
   jsonPlaceholderContext,
   JsonPlaceholderStoreSchema,
 } from "../json-placeholder.context";
-import { Button } from '@material-ui/core';
+import { Button } from "@material-ui/core";
 
 const Example = () => {
   /*
@@ -12,7 +12,7 @@ const Example = () => {
   When destructuring, any primitive variables will remain at latest values and won't be observable anymore.
   Use boxed observables to track primitive values exclusively or preferably pass a whole state object around.
 
-  example: const { heroes, hero, getHeroes,isLoading } = useContext(heroContext);
+  Example: const { heroes, hero, getHeroes,isLoading } = useContext(heroContext);
   */
 
   const jsonPlaceholderStore = useContext<JsonPlaceholderStoreSchema>(
@@ -31,9 +31,23 @@ const Example = () => {
             {po.title} - By: author with an ID of {po.userId}
           </h2>
           <p>{po.body}</p>
-          <Button onClick={()=> jsonPlaceholderStore.getPostByIdAction(po.id).then()} 
-          variant={'outlined'} color={'secondary'}
-          >SEE DETAILS</Button>
+          <Button
+            onClick={() => jsonPlaceholderStore.getPostByIdAction(po.id).then()}
+            variant={"outlined"}
+            color={"secondary"}
+            style={{ marginRight: "2rem" }}
+          >
+            Details
+          </Button>
+          <Button
+            onClick={() =>
+              jsonPlaceholderStore.temporaryRemovePostByIdAction(po.id)
+            }
+            variant={"text"}
+            color={"default"}
+          >
+            Temporary Delete
+          </Button>
         </div>
       ))}
     </>

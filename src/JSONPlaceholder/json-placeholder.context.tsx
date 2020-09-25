@@ -12,23 +12,21 @@ export type JsonPlaceholderStoreSchema = {
   readonly getPostsAction: () => Promise<void>;
   readonly getPostByIdAction: (id: number) => Promise<void>;
   readonly removePostsAction: () => void;
-  readonly totalPosts: any;
+  readonly temporaryRemovePostByIdAction: (id: number) => void;
+  readonly totalPosts: number;
 };
 
 export const JsonPlaceholderProvider = ({ children }) => {
   const store = useLocalStore(() => ({
     /*observables*/
-    posts: [],
-    post: {
-      userId: 0,
-      id: 0,
-      title: "",
-      body: "",
-    },
+
+    posts: [] as JsonPlaceholderType[],
+    post: {} as JsonPlaceholderType,
     loading: false,
     error: "",
 
     /*asynchronous actions*/
+
     async getPostsAction() {
       store.loading = true;
       store.error = "";
@@ -62,6 +60,10 @@ export const JsonPlaceholderProvider = ({ children }) => {
       store.loading = false;
     },
 
+    temporaryRemovePostByIdAction(id: number) {
+      store.posts = store.posts.filter(p => p.id !== id);
+    },
+
     setError({ message }) {
       store.error = message;
       alert(message);
@@ -80,6 +82,7 @@ export const JsonPlaceholderProvider = ({ children }) => {
     </jsonPlaceholderContext.Provider>
   );
 };
+
 export const jsonPlaceholderContext = createContext<JsonPlaceholderStoreSchema>(
   null
 );

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfaeedd3-8f9d-4240-b608-14ae3396fdb9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JSONPlaceholder/components/example.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/JSONPlaceholder/components/example.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JSONPlaceholder/json-placeholder.context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/JSONPlaceholder/json-placeholder.context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +42,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TF_FMT" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -53,11 +58,28 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\devduldu\AppData\Roaming\npm\node_modules\prettier" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
-    <property name="ts.external.directory.path" value="C:\Users\devduldu\Downloads\material-ui-gatsby-ts\hello-world\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="develop" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="develop" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.develop" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -73,6 +95,7 @@
       <workItem from="1600979499183" duration="1650000" />
       <workItem from="1600981181817" duration="3933000" />
       <workItem from="1601011291237" duration="5021000" />
+      <workItem from="1601038506122" duration="2389000" />
     </task>
     <task id="LOCAL-00001" summary="added mobx typings">
       <created>1600983881644</created>
@@ -113,6 +136,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="added IDEs setup" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="653" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1601040777156">
+      <screen x="0" y="23" width="1680" height="980" />
+    </state>
+    <state x="653" y="236" key="#com.intellij.ide.util.MemberChooser/0.23.1680.980@0.23.1680.980" timestamp="1601040777156" />
     <state x="4646" y="104" key="CommitChangelistDialog2" timestamp="1601016064000">
       <screen x="3840" y="0" width="2560" height="1400" />
     </state>
@@ -121,9 +148,26 @@
       <screen x="3840" y="0" width="2560" height="1400" />
     </state>
     <state x="4089" y="123" key="DiffContextDialog/3840.0.2560.1400/0.0.2560.1400@3840.0.2560.1400" timestamp="1601012496711" />
-    <state x="4520" y="259" key="SettingsEditor" timestamp="1601016022851">
-      <screen x="3840" y="0" width="2560" height="1400" />
+    <state width="1659" height="84" key="GridCell.Tab.0.bottom" timestamp="1601039015987">
+      <screen x="0" y="23" width="1680" height="980" />
     </state>
+    <state width="1659" height="84" key="GridCell.Tab.0.bottom/0.23.1680.980@0.23.1680.980" timestamp="1601039015987" />
+    <state width="1659" height="84" key="GridCell.Tab.0.center" timestamp="1601039015987">
+      <screen x="0" y="23" width="1680" height="980" />
+    </state>
+    <state width="1659" height="84" key="GridCell.Tab.0.center/0.23.1680.980@0.23.1680.980" timestamp="1601039015987" />
+    <state width="1659" height="84" key="GridCell.Tab.0.left" timestamp="1601039015987">
+      <screen x="0" y="23" width="1680" height="980" />
+    </state>
+    <state width="1659" height="84" key="GridCell.Tab.0.left/0.23.1680.980@0.23.1680.980" timestamp="1601039015987" />
+    <state width="1659" height="84" key="GridCell.Tab.0.right" timestamp="1601039015987">
+      <screen x="0" y="23" width="1680" height="980" />
+    </state>
+    <state width="1659" height="84" key="GridCell.Tab.0.right/0.23.1680.980@0.23.1680.980" timestamp="1601039015987" />
+    <state x="446" y="204" key="SettingsEditor" timestamp="1601039581209">
+      <screen x="0" y="23" width="1680" height="980" />
+    </state>
+    <state x="446" y="204" key="SettingsEditor/0.23.1680.980@0.23.1680.980" timestamp="1601039581209" />
     <state x="4520" y="259" key="SettingsEditor/3840.0.2560.1400/0.0.2560.1400@3840.0.2560.1400" timestamp="1601016022851" />
     <state x="4613" y="364" key="Vcs.Push.Dialog.v2" timestamp="1601016065813">
       <screen x="3840" y="0" width="2560" height="1400" />
