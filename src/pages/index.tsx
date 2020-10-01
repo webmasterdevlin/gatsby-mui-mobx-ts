@@ -18,7 +18,7 @@ export default function Home() {
         Is fetching? {jsonPlaceholderStore.loading.toString()}
       </h1>
       <h2>Total posts: {jsonPlaceholderStore.totalPosts}</h2>
-      <h2>You have chosen: {jsonPlaceholderStore.post.title}</h2>
+      <h2 style={{color:"purple"}}>You have chosen: {jsonPlaceholderStore.post.title}</h2>
       <Button
         onClick={() => jsonPlaceholderStore.getPostsAction()}
         variant={"contained"}

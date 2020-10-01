@@ -28,7 +28,7 @@ const Example = () => {
       {jsonPlaceholderStore?.posts.map(po => (
         <div key={po.id}>
           <h2>
-            {po.title} - By: author with an ID of {po.userId}
+            {po.title}
           </h2>
           <p>{po.body}</p>
           <Button
