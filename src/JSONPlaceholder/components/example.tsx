@@ -1,12 +1,12 @@
 import React, { useContext, useEffect } from "react";
-import { useObserver } from "mobx-react-lite";
+import { observer } from "mobx-react-lite";
 import {
   jsonPlaceholderContext,
   JsonPlaceholderStoreSchema,
 } from "../json-placeholder.context";
 import { Button } from "@material-ui/core";
 
-const Example = () => {
+const Example = observer(() => {
   /*
   Don't destructure. MobX observable are objects (and derivatives) only.
   When destructuring, any primitive variables will remain at latest values and won't be observable anymore.
@@ -23,13 +23,11 @@ const Example = () => {
     jsonPlaceholderStore.getPostsAction().then();
   }, []);
 
-  return useObserver(() => (
+  return (
     <>
       {jsonPlaceholderStore?.posts.map(po => (
         <div key={po.id}>
-          <h2>
-            {po.title}
-          </h2>
+          <h2>{po.title}</h2>
           <p>{po.body}</p>
           <Button
             onClick={() => jsonPlaceholderStore.getPostByIdAction(po.id).then()}
@@ -51,7 +49,7 @@ const Example = () => {
         </div>
       ))}
     </>
-  ));
-};
+  );
+});
 
 export default Example;
