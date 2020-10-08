@@ -1,29 +1,54 @@
 import React, { createContext } from "react";
-import { useLocalStore } from "mobx-react-lite";
+import { useLocalObservable } from "mobx-react-lite";
 import { getPostByIdAxios, getPostsAxios } from "./json-placeholder.service";
 import { JsonPlaceholderType } from "./json-placeholder.type";
 
 export type JsonPlaceholderStoreSchema = {
+  /*state*/
   readonly posts: JsonPlaceholderType[];
   readonly post: JsonPlaceholderType;
   readonly loading: boolean;
   readonly error: string;
 
-  readonly getPostsAction: () => Promise<void>;
-  readonly getPostByIdAction: (id: number) => Promise<void>;
+  /*non-async actions*/
   readonly removePostsAction: () => void;
   readonly temporaryRemovePostByIdAction: (id: number) => void;
+
+  /*computed or derived values*/
   readonly totalPosts: number;
+
+  /*asynchronous actions*/
+  readonly getPostsAction: () => Promise<void>;
+  readonly getPostByIdAction: (id: number) => Promise<void>;
 };
 
 export const JsonPlaceholderProvider = ({ children }) => {
-  const store = useLocalStore(() => ({
-    /*observables*/
-
+  const store = useLocalObservable(() => ({
+    /*observable states*/
     posts: [] as JsonPlaceholderType[],
     post: {} as JsonPlaceholderType,
     loading: false,
     error: "",
+
+    /*non-async actions*/
+    removePostsAction() {
+      store.posts = [];
+      store.loading = false;
+    },
+
+    // temporary because this function does not send request to the backend
+    temporaryRemovePostByIdAction(id: number) {
+      store.posts = store.posts.filter(p => p.id !== id);
+    },
+    setError({ message }) {
+      store.error = message;
+      alert(message);
+    },
+
+    /*computed values also known as derived state*/
+    get totalPosts() {
+      return store.posts.length;
+    },
 
     /*asynchronous actions*/
 
@@ -39,7 +64,6 @@ export const JsonPlaceholderProvider = ({ children }) => {
         store.loading = false;
       }
     },
-
     async getPostByIdAction(id: number) {
       store.loading = true;
       store.error = "";
@@ -51,29 +75,6 @@ export const JsonPlaceholderProvider = ({ children }) => {
       } finally {
         store.loading = false;
       }
-    },
-
-    /*plain actions*/
-
-    removePostsAction() {
-      store.posts = [];
-      store.loading = false;
-    },
-
-    // temporary because this function does not send request to the backend
-    temporaryRemovePostByIdAction(id: number) {
-      store.posts = store.posts.filter(p => p.id !== id);
-    },
-
-    setError({ message }) {
-      store.error = message;
-      alert(message);
-    },
-
-    /*computed values also known as derived state*/
-
-    get totalPosts() {
-      return store.posts.length;
     },
   }));
 

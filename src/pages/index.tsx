@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Example from "../JSONPlaceholder/components/example";
-import { Box, Button, Container } from "@material-ui/core";
+import { Button, Container } from "@material-ui/core";
 import { useObserver } from "mobx-react-lite";
 import {
   jsonPlaceholderContext,
@@ -14,11 +14,11 @@ export default function Home() {
 
   return useObserver(() => (
     <Container>
-      <h1>
-        Is fetching? {jsonPlaceholderStore.loading.toString()}
-      </h1>
+      <h1>Is fetching? {jsonPlaceholderStore.loading.toString()}</h1>
       <h2>Total posts: {jsonPlaceholderStore.totalPosts}</h2>
-      <h2 style={{color:"purple"}}>You have chosen: {jsonPlaceholderStore.post.title}</h2>
+      <h2 style={{ color: "purple" }}>
+        You have chosen: {jsonPlaceholderStore.post.title}
+      </h2>
       <Button
         onClick={() => jsonPlaceholderStore.getPostsAction()}
         variant={"contained"}

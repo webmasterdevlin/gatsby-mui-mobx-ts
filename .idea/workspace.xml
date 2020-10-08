@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfaeedd3-8f9d-4240-b608-14ae3396fdb9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JSONPlaceholder/json-placeholder.context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/JSONPlaceholder/json-placeholder.context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +94,8 @@
       <workItem from="1600981181817" duration="3933000" />
       <workItem from="1601011291237" duration="5021000" />
       <workItem from="1601038506122" duration="2492000" />
+      <workItem from="1602151150277" duration="167000" />
+      <workItem from="1602188002103" duration="205000" />
     </task>
     <task id="LOCAL-00001" summary="added mobx typings">
       <created>1600983881644</created>
